@@ -1,39 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  
-  --color-brand-orange: #FF671F;
-  --color-brand-green: #046A38;
-  --color-brand-blue: #06038D;
+  --color-brand-50: #eef8ff;
+  --color-brand-100: #d8efff;
+  --color-brand-200: #bae3ff;
+  --color-brand-300: #8bd3ff;
+  --color-brand-400: #54baff;
+  --color-brand-500: #0494f4;
+  --color-brand-600: #0077cd;
+  --color-brand-700: #005fa7;
+  --color-brand-800: #045089;
+  --color-brand-900: #0a4372;
+  --color-brand-950: #062b4c;
+  --color-brand: #0494f4;
+
+  /* Official Google Dark Theme System Colors */
+  --color-zinc-950: #202124;
+  --color-zinc-900: #292a2d;
+  --color-zinc-850: #2e2f33;
+  --color-zinc-800: #303134;
+  --color-zinc-700: #3c4043;
+  --color-zinc-600: #5f6368;
+  --color-zinc-500: #80868b;
+  --color-zinc-400: #9aa0a6;
+  --color-zinc-300: #bdc1c6;
+  --color-zinc-200: #dadce0;
+  --color-zinc-100: #f1f3f4;
+  --color-zinc-50: #f8f9fa;
 }
 
-@layer base {
-  body {
-    @apply bg-neutral-50 text-neutral-900 font-sans antialiased;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
-  }
+:root {
+  --primary-brand: #0494f4;
 }
 
-.glass {
-  @apply bg-white/70 backdrop-blur-md border border-white/20;
+/* Google Dark Theme Base Application */
+html.dark,
+html.dark body {
+  background-color: #202124 !important;
+  color: #e8eaed !important;
 }
 
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-orange via-neutral-900 to-brand-green;
+html.light,
+html.light body {
+  background-color: #ffffff !important;
+  color: #202124 !important;
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Lightweight & Smooth UI Engine */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
-.animate-scroll {
-  animation: scroll 30s linear infinite;
+body {
+  will-change: auto;
 }
+
