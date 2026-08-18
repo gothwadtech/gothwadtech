@@ -1,5 +1,6 @@
 {
-  "name": "Gothwad Technologies",
-  "description": "An Indian IT company dedicated to making India tech-independent through 100% pure Indian software, apps, and AI development.",
-  "requestFramePermissions": []
+  "name": "Gothwad Tech",
+  "description": "Official corporate platform of Gothwad Tech showcasing sovereign deep-tech digital infrastructure, flagship products (Gothwad Browser, GrixChat, Indogram), enterprise software services, portfolio gallery, leadership, and client systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
